@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" /> 
+  <title>CEO Compensation</title>
+  <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->    
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="assets/ceocomp.css" />
+  <script type="template/text" id="ceolist-tmpl">
+    <p>
+      If you earned an average of <b><%= income %> a year</b>, or <b><%= wage %></b> an hour
+      during your working lifetime, It would take this many years to match the annual pay of
+      these Atlanta CEOs:
+    </p>
+  </script>
+  <script type="text/template" id="ceo-tmplt">
+  	<h1><%= name %></h1>
+  	<%= company %><br/>
+  	Total annual compensation in 2011: <b><%= compensation %></b> annually or <b><%= hourly %></b> hourly
+  	<h3><%= lifetimes %> lifetimes</h3>
+  </script>
+  <script type="text/template" id = "income-tmplt">
+    <input type="text" class="inpt" value="<%= income %>">
+    <input type="submit" class="btn" value="Go"/>
+  </script>
+  <script type="text/template" id = "wage-tmplt">
+    <input type="text" class="inpt" value="<%= wage %>">
+    <input type="submit" class="btn" value="Go"/>
+  </script>
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>How many lifetimes would it take you to earn just one year's salary for one of the top Atlanta CEOs?</h1>
+    <p>
+      Assuming you start working when you turn 21 and stop just before your 65th birthday,
+      we calculate how many working lifetimes it would take to earn the equivalent of
+      just one year's take-home pay for the chief executive officers of Atlanta's top
+      publically-traded companies.
+    </p>
+    <p>
+      CEO take-home pay, or their "realizable pay," includes the value of all the cash, perks
+      and company stock taht a CEO gains ownership of during a year.
+    </p>
+    <p>
+      The <b>median family income</b> in the Atlanta metro is <b>$50,000</b> a year.
+      That would result in <b>take-home pay</b> of about <b>$38,780</b>. <b>Minimum wage</b>
+      is <b>$7.35</b> an hour, or a little less than <b>$15,288 annually</b>. Estimated
+      <b>take-home pay</b> would be <b>$6.40</b> an hour or <b>$13,300</b> annually.
+    </p>
+  </header>
+
+  <div id="input"></div>
+	<div id="content">Loading ... </div>
+
+  <footer>
+    <hr/>
+    <p>* Named new CEO in 2011.</p>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="assets/underscore.js"></script>
+  <script src="assets/backbone.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="assets/ceocomp.js"></script>
+</body>
+</html>
