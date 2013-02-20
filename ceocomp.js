@@ -15,7 +15,6 @@ $(function() {
 			var IncomeModel = Backbone.Model.extend({
 				initialize: function() {
 					this.on( 'change:income', function() {
-						this.set('wage', (this.get('income') /52 /40).toFixed(2) );
 						console.log("Income changed");
 						ceoList.reset(data);
 					});
@@ -23,17 +22,11 @@ $(function() {
 			});
 
 			var incomeModel = new IncomeModel({
-				income: 38780,
-				wage: (38780 / 40 / 52).toFixed(2)
+				income: 38780
 			});
 
 
-			var Ceo = Backbone.Model.extend({
-				initialize : function() {
-					this.attributes.hourly = (parseFloat(this.attributes.compensation.replace(/[$,]/g, ''))/52/40).toFixed(2);
-					this.attributes.lifetimes = Math.ceil(parseFloat(this.attributes.compensation.replace(/[$,]/g, ''))/(incomeModel.get('income') * 42));
-				}
-			});
+			var Ceo = Backbone.Model.extend({});
 
 
 			var CeoList = Backbone.Collection.extend({
