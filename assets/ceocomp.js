@@ -16,7 +16,7 @@ $(function() {
 				initialize: function() {
 					this.on( 'change:income', function() {
 						this.set('wage', (this.get('income') /52 /40).toFixed(2) );
-						console.log("Income changed");
+						//console.log("Income changed");
 						ceoList.reset(data);
 					});
 				}
@@ -65,7 +65,7 @@ $(function() {
 				addAll: function() {
 					this.$el.html( this.template( incomeModel.toJSON() ));
 					this.collection.forEach( this.addCeo, this );
-					console.log("Collection reset")
+					//console.log("Collection reset")
 				},
 				addCeo: function(ceo) {
 					var ceoView = new CeoView({ model: ceo });
@@ -100,8 +100,8 @@ $(function() {
 				},
 				enterIncome: function(e) {
 					if ( e.keyCode ===13 ) {
-						console.log(e.keyCode);
-					incomeModel.set({ 'income': this.$('.inpt').val() });
+						//console.log(e.keyCode);
+						incomeModel.set({ 'income': this.$('.inpt').val() });
 					}
 				}
 			});
