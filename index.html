@@ -9,19 +9,21 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->    
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="http://host.coxmediagroup.com/ajc/digitalprojects/global/css/iFrame_Medley.css" type="text/css"/>
   <link rel="stylesheet" type="text/css" href="assets/ceocomp.css" />
   <script type="template/text" id="ceolist-tmpl">
     <p>
-      If you earned an average of <b><%= income %> a year</b>, or <b><%= wage %></b> an hour
+      If you earned an average of <strong><%= income %> a year</strong>, or <strong><%= wage %></strong> an hour
       during your working lifetime, It would take this many years to match the annual pay of
       these Atlanta CEOs:
-    </p>
+    </p><br/>
   </script>
   <script type="text/template" id="ceo-tmplt">
   	<h1><%= name %></h1>
   	<%= company %><br/>
-  	Total annual compensation in 2011: <b><%= compensation %></b> annually or <b><%= hourly %></b> hourly
-  	<h3><%= lifetimes %> lifetimes</h3>
+  	Total annual compensation in 2011: <strong><%= compensation %></strong> annually or <strong><%= hourly %></strong> hourly
+  	<h3 class="lifetimes"><%= lifetimes %> lifetimes</h3>
+
   </script>
   <script type="text/template" id = "income-tmplt">
     <input type="text" class="inpt" value="<%= income %>">
@@ -42,11 +44,11 @@
       and company stock taht a CEO gains ownership of during a year.
     </p>
     <p>
-      The <b>median family income</b> in the Atlanta metro is <b>$50,000</b> a year.
-      That would result in <b>take-home pay</b> of about <b>$38,780</b>. <b>Minimum wage</b>
-      is <b>$7.35</b> an hour, or a little less than <b>$15,288 annually</b>. Estimated
-      <b>take-home pay</b> would be <b>$6.40</b> an hour or <b>$13,300</b> annually.
-    </p>
+      The <strong>median family income</strong> in the Atlanta metro is <strong>$50,000</strong> a year.
+      That would result in <strong>take-home pay</strong> of about <strong>$38,780</strong>. <strong>Minimum wage</strong>
+      is <strong>$7.35</strong> an hour, or a little less than <strong>$15,288 annually</strong>. Estimated
+      <strong>take-home pay</strong> would be <strong>$6.40</strong> an hour or <strong>$13,300</strong> annually.
+    </p><br/>
   </header>
 
   <div id="input"></div>
