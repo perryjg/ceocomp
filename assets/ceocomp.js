@@ -84,7 +84,7 @@ $(function() {
 
 			var IncomeView = Backbone.View.extend({
 				id: 'salary_entry',
-				template: _.template( 'Enter your <b>annual</b> salary: ' + $("#income-tmplt").html() ),
+				template: _.template( 'Enter your <strong>annual</strong> salary: ' + $("#income-tmplt").html() ),
 
 				events: {
 					'keypress .inpt' : 'enterIncome',

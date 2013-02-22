@@ -4,7 +4,6 @@ body {
   color: #444444;
   font-family: Arial,Helvetica,sans-serif;
 }
-
 article h1 {
 	display: inline;
 	font-size: 1.5em;
@@ -20,10 +19,16 @@ article p {
 }
 article {
 	margin: 8px;
-	padding: 2px;
-	background-color: #EEEEEE;
+	padding: 4px;
 	font-size: 1em;
+	background-color: #FEFBF3;
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 10px;
 }
 ul#notes {
 	list-style-type: none;
+}
+.lifetimes{
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 10px;
 }
