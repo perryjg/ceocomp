@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="assets/ceocomp.css" />
   <script type="template/text" id="ceolist-tmpl">
     <p>
-      If you earned an average of <b><%= income %> a year</b>, or <b><%= wage %></b> an hour
+      If you earned an average of <b><%= income %> a year</b>, or <b class="number"><%= wage %></b> an hour
       during your working lifetime, It would take this many years to match the annual pay of
       these Atlanta CEOs:
     </p>
@@ -20,8 +20,8 @@
   <script type="text/template" id="ceo-tmplt">
   	<h1><%= name %></h1>
   	<%= company %><br/>
-  	Total annual compensation in 2011: <b><%= compensation %></b> annually or <b><%= hourly %></b> hourly
-  	<h3><%= lifetimes %> lifetimes</h3>
+  	<p>Pay in 2011: <b><%= compensation %></b>, or <b><%= hourly %></b> hourly</p>
+  	<h2><%= lifetimes %> lifetimes</h2>
   </script>
   <script type="text/template" id = "income-tmplt">
     <input type="text" class="inpt" value="<%= income %>">
@@ -54,12 +54,16 @@
 
   <footer>
     <hr/>
-    <p>* Named new CEO in 2011.</p>
+    <ul id="notes">
+      <li><b>*</b> Named new CEO in 2011.</li>
+      <li>Hourly wage caluculatoins assume a 40-hour work week
+    </ul
   </footer>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="assets/underscore.js"></script>
   <script src="assets/backbone.js"></script>
+  <script src="assets/accounting.min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="assets/ceocomp.js"></script>
 </body>

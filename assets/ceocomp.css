@@ -1,0 +1,29 @@
+body {
+  font-size: 0.75em;
+  line-height: 1.2;
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+article h1 {
+	display: inline;
+	font-size: 1.5em;
+}
+article h2 {
+	padding: 0;
+	margin: 0;
+	color: red;
+}
+article p {
+	margin: 0;
+	padding: 3px
+}
+article {
+	margin: 8px;
+	padding: 2px;
+	background-color: #EEEEEE;
+	font-size: 1em;
+}
+ul#notes {
+	list-style-type: none;
+}

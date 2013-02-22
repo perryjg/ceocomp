@@ -30,7 +30,7 @@ $(function() {
 
 			var Ceo = Backbone.Model.extend({
 				initialize : function() {
-					this.attributes.hourly = (parseFloat(this.attributes.compensation.replace(/[$,]/g, ''))/52/40).toFixed(2);
+					this.attributes.hourly = accounting.formatMoney( (parseFloat(this.attributes.compensation.replace(/[$,]/g, ''))/52/40).toFixed(2) );
 					this.attributes.lifetimes = Math.ceil(parseFloat(this.attributes.compensation.replace(/[$,]/g, ''))/(incomeModel.get('income') * 42));
 				}
 			});
