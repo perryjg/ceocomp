@@ -94,7 +94,7 @@ $(function() {
 					return this;
 				},
 				updateIncome: function() {
-					inputValue = this.$('.inpt').val();
+					inputValue = this.$('.inpt').val().replace(/[^0-9]/g, '');
 					incomeModel.set({ 'income': isNaN(inputValue) ? 0 : inputValue });
 				},
 				enterIncome: function(e) {
