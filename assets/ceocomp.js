@@ -94,8 +94,8 @@ $(function() {
 					return this;
 				},
 				updateIncome: function() {
-					var inputValue = parseFloat( this.$('.inpt').val() );
-					incomeModel.set({ 'income':  isNaN(inputValue) ? 0 : inputValue });
+					inputValue = this.$('.inpt').val();
+					incomeModel.set({ 'income': isNaN(inputValue) ? 0 : inputValue });
 				},
 				enterIncome: function(e) {
 					if ( e.keyCode ===13 ) { this.updateIncome(); }
