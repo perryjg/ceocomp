@@ -16,7 +16,6 @@ $(function() {
 				initialize: function() {
 					this.on( 'change:income', function() {
 						this.set('wage', (this.get('income') /52 /40).toFixed(2) );
-						//console.log("Income changed");
 						ceoList.reset(data);
 					});
 				}
@@ -65,7 +64,6 @@ $(function() {
 				addAll: function() {
 					this.$el.html( this.template( incomeModel.toJSON() ));
 					this.collection.forEach( this.addCeo, this );
-					//console.log("Collection reset")
 				},
 				addCeo: function(ceo) {
 					var ceoView = new CeoView({ model: ceo });
