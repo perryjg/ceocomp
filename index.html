@@ -13,9 +13,9 @@
   <link rel="stylesheet" type="text/css" href="assets/ceocomp.css" />
   <script type="template/text" id="ceolist-tmpl">
     <p>
-      If you earned an average of <strong><%= income %> a year</strong>, or <strong><%= wage %></strong> an hour
-      during your working lifetime, It would take this many years to match the annual pay of
-      these Atlanta CEOs:
+      If you earned an average of <strong><%= accounting.formatMoney(income, '$', 0) %> a year</strong>,
+      or <strong><%= accounting.formatMoney(wage) %></strong> an hour during your working lifetime, It
+      would take this many years to match the annual pay of these Atlanta CEOs:
     </p><br/>
   </script>
   <script type="text/template" id="ceo-tmplt">
