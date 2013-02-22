@@ -22,8 +22,8 @@ $(function() {
 			});
 
 			var incomeModel = new IncomeModel({
-				income: 38780,
-				wage: (38780 / 40 / 52).toFixed(2)
+				income: 50000,
+				wage: (50000 / 40 / 52).toFixed(2)
 			});
 
 
